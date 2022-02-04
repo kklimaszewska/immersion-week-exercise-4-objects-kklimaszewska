@@ -6,7 +6,7 @@ test("Group Families (1)", () => {
       { name: "Barack", surname: "Obama" },
       { name: "Michelle", surname: "Obama" },
     ])
-  ).toBe({ Obama: ["Barack", "Michelle"] });
+  ).toStrictEqual({ Obama: ["Barack", "Michelle"] });
 });
 
 test("Group Families (2)", () => {
@@ -16,5 +16,9 @@ test("Group Families (2)", () => {
       { name: "Michelle", surname: "Obama" },
       { name: "Donald", surname: "Trump" },
     ])
-  ).toBe({ Obama: ["Barack", "Michelle"], Trump: ["Donald"] });
+  ).toStrictEqual({ Obama: ["Barack", "Michelle"], Trump: ["Donald"] });
 });
+
+
+
+

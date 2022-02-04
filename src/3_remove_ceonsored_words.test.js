@@ -8,7 +8,7 @@ test("Remove Censored (1)", () => {
     omg: "w*sh",
   };
   rmCensored(swearWords);
-  expect(swearWords).toBe({ "sweet jesus": "doux jesus" });
+  expect(swearWords).toStrictEqual({ "sweet jesus": "doux jesus" });
 });
 
 test("Remove Censored (2)", () => {
@@ -19,5 +19,5 @@ test("Remove Censored (2)", () => {
     tomato: "fr*it",
   };
   rmCensored(veggies);
-  expect(veggies).toBe({ potato: "starch", collard: "green" });
+  expect(veggies).toStrictEqual({ potato: "starch", collard: "green" });
 });
