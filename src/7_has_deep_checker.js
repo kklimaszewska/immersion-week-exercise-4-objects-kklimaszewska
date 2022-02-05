@@ -14,9 +14,7 @@ function hasValueDepth(objct, val) {
   let tabOfValues = [];
   toTab(objct, tabOfValues);
 
-//  console.log(tabOfValues);
-
-//sprawdzenie czy podana wartość znajduje się w utworzonej wyrzej tabeli
+//sprawdzenie czy podana wartość znajduje się w utworzonej wyżej tabeli
 if (tabOfValues.includes(val)) {
   return true;
 } else {

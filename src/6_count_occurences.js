@@ -4,7 +4,7 @@ module.exports = countOccurences;
 function countOccurences(str) {
   let words = str.split(' '); //zamieniam zdanie na tablicę słów
   let obj = {};
-  //w pętli for tworzę obiekt w którym zliczam poszczeólne słowa
+  //w pętli for tworzę obiekt w którym zliczam poszczeólne słowa {słowo : ilość występowania}
   for (let i=0; i<words.length; i++){
     if (Object.keys(obj).includes(words[i])) {
       obj[words[i]] += 1;
@@ -13,7 +13,8 @@ function countOccurences(str) {
     }
   }
   let objRev = {};
-  //w pętli for tworzę obiekt w oparciu o stworzony wcześniej 'obj' zamieniam klucze z wartościami i zliczam
+  //w pętli for tworzę obiekt w oparciu o stworzony wcześniej 'obj' zamieniam klucze z wartościami i zliczam:
+  //{ilość występowania : [słowa, które występują daną ilość razy]}
   for (let key in obj) {
     if (Object.keys(objRev).includes(obj[key].toString())){
       objRev[obj[key]].push(key);
